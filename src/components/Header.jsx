@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({ filtrarProdutos }) => {
     return ( 
            <header 
            className="flex items-center justify-between px-15 py-4 bg-cyan-500">
@@ -9,7 +9,7 @@ const Header = () => {
             className="w-120 h-10 rounded bg-white pl-4" />
         </div>
         <div>
-            <select 
+            <select onChange={(event) => filtrarProdutos(event.target.value)}
             className="h-10 rounded bg-white px-4">
                 <option selected disabled>Selecione uma categoria</option>
                 <option>All</option>
